@@ -10,7 +10,8 @@ public class CadastroPageObject {
 	private MobileElement campoSenha;
 	private MobileElement campoConfirmarSenha;
 	private MobileElement botaoCadastrar;
-
+	private MobileElement MsgErro;
+	
 	public CadastroPageObject(AppiumDriver driver) {
 		this.driver = driver;
 	}
@@ -23,14 +24,20 @@ public class CadastroPageObject {
 		botaoCadastrar = (MobileElement) driver.findElementById("br.com.alura.aluraesporte:id/cadastro_usuario_botao_cadastrar");
 	}
 	
-	public void preencherFormulario(String usuario, String senha, String confirmacaoSenha) {
+	private void preencherFormulario(String usuario, String senha, String confirmacaoSenha) {
 		
 		campoNome.setValue(usuario);
 		campoSenha.setValue(senha);
 		campoConfirmarSenha.setValue(confirmacaoSenha);
 	}
 
-	public void cadastrar() {
+	public void cadastrar(String usuario, String senha, String confirmacaoSenha) {
+		preencherFormulario(usuario, senha, confirmacaoSenha);
 		botaoCadastrar.click();
+	}
+
+	public String msgErro() {
+		MsgErro = (MobileElement) driver.findElementById("br.com.alura.aluraesporte:id/erro_cadastro");
+		return MsgErro.getText();
 	}
 }
