@@ -5,7 +5,7 @@ Abrindo o UI Automator Viewer
 
 C:\Users\Felipe\AppData\Local\Android\Sdk\tools\tools\bin\uiautomatorviewer.bat
 
-lembrando que todo ambiente jรก se encontra configurado
+lembrando que todo ambiente já se encontra configurado (instalação do appium, android studio, emulador android, eclipse)
 
 1- Abrir o windows power shell:
 
