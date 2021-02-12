@@ -10,6 +10,7 @@ lembrando que todo ambiente já se encontra configurado (instalação do appium,
 1- Abrir o windows power shell:
 
 PS C:\Users\Felipe> appium
+
 Welcome to Appium v1.18.1
 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
 [Appium] Received SIGINT - shutting down
